@@ -49,12 +49,27 @@ public class probando {
         for (String d : page) {
 
             driver.findElement(By.linkText(d)).click();
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             driver.findElement(By.linkText("Agregar al carro de compras")).click();
             System.out.println(d);
-            Thread.sleep(5000);
+            Thread.sleep(2000);
             driver.get("https://pe.ebay.com/b/PUMA-Shoes-US-Size-10-for-Men/93427/bn_111288631?listingOnly=1&rt=nc&_dmd=1&_sop=15");
         }
+
+        Thread.sleep(2000);
+        driver.findElement(By.cssSelector("#gh-minicart-hover > div > a.gh-eb-li-a.gh-cart-count-1 > svg > use")).click();
+        System.out.println("Los zapatos seleccionados son:");
+        for  (String d : page) {
+            System.out.println(d);
+        }
+        
+
+        }
+
+
+
+
+
 
     }
 }
